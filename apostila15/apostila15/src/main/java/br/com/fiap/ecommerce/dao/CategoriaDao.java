@@ -2,9 +2,6 @@ package br.com.fiap.ecommerce.dao;
 
 import br.com.fiap.ecommerce.exception.EntidadeNaoEncontradaException;
 import br.com.fiap.ecommerce.model.Categoria;
-import br.com.fiap.ecommerce.model.Categoria;
-import br.com.fiap.ecommerce.model.Categoria;
-import br.com.fiap.ecommerce.model.Categoria;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 
@@ -13,7 +10,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -91,6 +87,7 @@ public class CategoriaDao {
         return new Categoria(codigo, nome);
     }
 
+    //CREATE
     public void cadastrar(Categoria categoria) throws SQLException {
         try (Connection connection = dataSource.getConnection()) {
 
