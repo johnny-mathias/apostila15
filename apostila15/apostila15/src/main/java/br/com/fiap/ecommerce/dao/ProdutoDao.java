@@ -32,7 +32,6 @@ public class ProdutoDao {
                     "qt_produto = ?, vl_produto = ?, dt_validade =? where cd_produto = ?");
             //Seta os parametros
             setarParametros(produto, stmt);
-            stmt.setInt(5 , produto.getCodigo());
             //Executa a query e valida se deu bom
             if (stmt.executeUpdate() == 0)
                 throw new EntidadeNaoEncontradaException("Produto não existe para ser atualizado");
